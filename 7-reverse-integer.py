@@ -7,24 +7,26 @@ class Solution:
 
     def reverse(self, x: int) -> int:
         list_of_numbers = [str(it) for it in str(x)]
-        return_value = ""
+        return_value_string = ""
         if list_of_numbers[0] == "-":
             result = list_of_numbers[::-1]
             result = result[-1:] + result[:-1]
             for i in result:
-                return_value += str(i)
-            if int(return_value) > 2147483647 or int(return_value) < -2147483647:
+                return_value_string += str(i)
+            return_value_int = int(return_value_string)
+            if return_value_int > 2147483647 or return_value_int < -2147483647:
                 return 0
             else:
-                return int(return_value)
+                return return_value_int
         else:
             result = list_of_numbers[::-1]
             for i in result:
-                return_value += str(i)
-            if int(return_value) > 2147483647 or int(return_value) < -2147483647:
+                return_value_string += str(i)
+            return_value_int = int(return_value_string)
+            if return_value_int > 2147483647 or return_value_int < -2147483647:
                 return 0
             else:
-                return int(return_value)
+                return return_value_int 
 
 
 test = Solution()
