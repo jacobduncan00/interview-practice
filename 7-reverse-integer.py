@@ -5,10 +5,6 @@
 
 class Solution:
 
-    def swapPosition(self, list, pos1, pos2):
-        list[pos1], list[pos2] = list[pos2], list[pos1]
-        return list
-
     def reverse(self, x: int) -> int:
         list_of_numbers = [str(it) for it in str(x)]
         return_value = ""
